@@ -20,8 +20,11 @@ import { MatListModule } from '@angular/material/list';
 import { PostService } from './shared/services/post.service';
 import { PhotoService } from './shared/services/photo.service';
 import { HttpClientModule } from '@angular/common/http';
-import { PhotoComponent } from './components/photo/photo.component';
 import { PostComponent } from './components/post/post.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PhotoComponent } from './components/photo/photo.component';
+
+
 
 @NgModule({
   imports: [
@@ -46,7 +49,8 @@ import { PostComponent } from './components/post/post.component';
     GalleryComponent,
     ContactUsComponent,
     PhotoComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostService, PhotoService]
