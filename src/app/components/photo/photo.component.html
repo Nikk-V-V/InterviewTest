@@ -1,3 +1,10 @@
-<p>
-photo works!
-</p>
+<div class="photo__container d-fle">
+  <mat-card *ngFor="let photo of photos">
+    <mat-card-header>
+      <mat-card-title>
+        {{photo.title}}
+      </mat-card-title>
+    </mat-card-header>
+    <img [src]="photo.thumbnailUrl" alt="photo">
+  </mat-card>
+</div>
