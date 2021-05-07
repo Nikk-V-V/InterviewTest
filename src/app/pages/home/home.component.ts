@@ -11,6 +11,7 @@ import { PostService } from '../../shared/services/post.service';
 export class HomeComponent implements OnInit {
   posts: Post[];
   photos: Photo[];
+
   constructor(
     private postService: PostService,
     private photoService: PhotoService
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   getTopTenPhoto(): void {
     this.photoService.getAll().subscribe((photos: Photo[]) => {
-      photos ? (this.photos = photos.slice(0, 19)) : null;
+      photos ? (this.photos = photos.slice(0, 10)) : null;
     });
   }
 

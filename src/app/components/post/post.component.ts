@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../shared/interfaces';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,8 +6,6 @@ import { Post } from '../../shared/interfaces';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  @Input('posts') posts: Post[];
-
   constructor() {}
 
   ngOnInit() {}
