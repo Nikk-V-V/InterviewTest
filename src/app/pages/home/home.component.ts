@@ -27,16 +27,13 @@ export class HomeComponent implements OnInit {
 
   getTopTenPhoto(): void {
     this.photoService.getAll().subscribe((photos: Photo[]) => {
-      
       photos ? (this.photos = photos.slice(0, 19)) : null;
-      console.log(this.photos);
     });
   }
 
   getTopTenPost() {
     this.postService.getAll().subscribe((posts: Post[]) => {
       posts ? (this.posts = posts.slice(0, 10)) : null;
-      console.log(this.posts);
     });
   }
 }

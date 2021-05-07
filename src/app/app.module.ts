@@ -46,8 +46,7 @@ import { PostComponent } from './components/post/post.component';
     GalleryComponent,
     ContactUsComponent,
     PhotoComponent,
-    PostComponent,
-    
+    PostComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostService, PhotoService]
