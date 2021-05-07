@@ -1,8 +1,55 @@
-<section class="contact-us">
-  <form [formGroup]="form">
-    <mat-form-field>
-      <mat-label>dssad</mat-label>
-      <input [formControlName]="fullnam" matInput type="text">
-    </mat-form-field>
+<section class="contact-us d-flex">
+  <form class="d-flex" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Full name</mat-label>
+        <input
+          autocomplete="off"
+          formControlName="fullname"
+          matInput
+          type="text"
+        >
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          autocomplete="off"
+          formControlName="email"
+          matInput type="text"
+        >
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input
+          autocomplete="off"
+          formControlName="phoneNumber"
+          matInput
+          type="tel"
+        >
+      </mat-form-field>
+      <div *ngIf="phoneNumberme.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+        <div *ngIf="phoneNumber.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="phoneNumber.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="phoneNumber.errors.pattern">
+          Name cannot be Bob.
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        color="primary"
+        mat-raised-button
+      >
+        Submit
+      </button>
+    </mat-card-actions>
   </form>
 </section>

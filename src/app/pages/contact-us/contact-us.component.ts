@@ -12,7 +12,32 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      fullname: new FormControl('', [Validators.required])
+      fullname: new FormControl(null, [Validators.required]),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      phoneNumber: new FormControl('+380', [
+        Validators.required,
+        Validators.minLength(13),
+        Validators.maxLength(13),
+        Validators.pattern(
+          /^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$/
+        )
+      ])
     });
+  }
+
+  onSubmit(): void {
+    console.log(this.phoneNumber.errors);
+  }
+
+  get fullname() {
+    return this.form.get('fullname');
+  }
+
+  get email() {
+    return this.form.get('email');
+  }
+
+  get phoneNumber() {
+    return this.form.get('phoneNumber');
   }
 }
