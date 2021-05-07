@@ -1,17 +1,13 @@
-<header>
-  <mat-toolbar class="container justify-between align-center">
+<mat-toolbar class="header">
+  <mat-toolbar-row class="container justify-between align-center">
     <button mat-icon-button>
-      <mat-icon>menu</mat-icon>
+        <mat-icon>menu</mat-icon>
     </button>
-    <nav>
-      <ul class="d-flex">
-        <li>Home</li>
-        <li>Posts</li>
-        <li>Gallery</li>
-        <li>Contact us</li>
-      </ul>
-    </nav>
-  </mat-toolbar>
-
-
-</header>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option>Home</mat-list-option>
+      <mat-list-option>Posts</mat-list-option>
+      <mat-list-option>Gallery</mat-list-option>
+      <mat-list-option>Contact us</mat-list-option>
+    </mat-selection-list>
+  </mat-toolbar-row>
+</mat-toolbar>

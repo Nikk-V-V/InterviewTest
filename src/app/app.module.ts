@@ -16,6 +16,7 @@ import { AsideComponent } from './components/aside/aside.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     MatCardModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   declarations: [
     AppComponent,

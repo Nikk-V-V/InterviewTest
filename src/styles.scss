@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  color: white;
 }
 
 body {
@@ -51,19 +52,10 @@ section {
   padding: 2rem;
 }
 
-ul li {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 1rem;
-  text-align: center;
-  cursor: pointer;
-}
-
-ul li:hover {
-  background: rgb(0 0 0 / 25%);
-}
-
-header .container,
-footer .container {
-  padding: 10px 2rem;
+mat-toolbar.header,
+mat-toolbar.footer {
+  mat-selection-list {
+    display: flex !important;
+    padding: 0 !important;
+  }
 }
