@@ -17,6 +17,9 @@ import { PostsComponent } from './pages/posts/posts.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { MatListModule } from '@angular/material/list';
+import { PostService } from './shared/services/post.service';
+import { PhotoService } from './shared/services/photo.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -29,7 +32,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -41,6 +45,6 @@ import { MatListModule } from '@angular/material/list';
     ContactUsComponent
   ],
   bootstrap: [AppComponent],
-  providers: []
+  providers: [PostService, PhotoService]
 })
 export class AppModule {}
