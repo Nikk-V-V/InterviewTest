@@ -1,8 +1,8 @@
-<mat-toolbar class="footer">
-  <mat-selection-list class="d-flex justyfy-center" [multiple]="false">
-    <mat-list-option>Home</mat-list-option>
-    <mat-list-option>Posts</mat-list-option>
-    <mat-list-option>Gallery</mat-list-option>
-    <mat-list-option>Contact us</mat-list-option>
+<mat-toolbar class="footer d-flex justyfy-center">
+  <mat-selection-list [multiple]="false">
+    <mat-list-option routerLink="home">Home</mat-list-option>
+    <mat-list-option routerLink="posts">Posts</mat-list-option>
+    <mat-list-option routerLink="gallery">Gallery</mat-list-option>
+    <mat-list-option routerLink="contact-us">Contact us</mat-list-option>
   </mat-selection-list>
 </mat-toolbar>

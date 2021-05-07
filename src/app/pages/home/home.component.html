@@ -1,8 +1,14 @@
-<section class="home">
-  <div class="photo">
+<section class="home d-flex">
+  <mat-card class="photo">
+    <mat-card-header>
+      <mat-card-title>Top 10 photos</mat-card-title>
+    </mat-card-header>
     <app-photo [photos]="photos"></app-photo>
-  </div>
-  <div class="posts">
+  </mat-card>
+  <mat-card class="posts">
+    <mat-card-header>
+      <mat-card-title>Pot 10 photos</mat-card-title>
+    </mat-card-header>
     <app-post [posts]="posts"></app-post>
-  </div>
+  </mat-card>
 </section>

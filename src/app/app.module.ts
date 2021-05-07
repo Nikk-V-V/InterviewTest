@@ -23,8 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './components/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PhotoComponent } from './components/photo/photo.component';
-
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [
@@ -38,7 +38,9 @@ import { PhotoComponent } from './components/photo/photo.component';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule,
+    MatFormFieldModule
   ],
   declarations: [
     AppComponent,
