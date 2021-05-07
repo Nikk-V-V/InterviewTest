@@ -1,0 +1,12 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'dialog'" mode="over" [opened]="false">
+    <app-aside></app-aside>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header [drawer]='drawer'></app-header>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>

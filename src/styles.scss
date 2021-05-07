@@ -1,0 +1,69 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* CUSTOM THEMES */
+@import '~@angular/material/theming';
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+ul li {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background: rgb(0 0 0 / 25%);
+}
+
+header .container,
+footer .container {
+  padding: 10px 2rem;
+}
