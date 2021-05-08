@@ -10,11 +10,17 @@ export class PostComponent implements OnInit {
   @Input('posts') posts: Post[];
   @Input('className') className: string;
   @Output() deletePost: EventEmitter<any> = new EventEmitter();
+  @Output() update: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
 
-  remove(id: number): any {
+  remove(id: number): void {
     this.deletePost.emit(id);
+  }
+
+  updatePost(post: Post): void {
+    this.update.emit(post);
   }
 }

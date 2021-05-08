@@ -68,12 +68,15 @@ export class PostsComponent implements OnInit {
     this.getPageData(this.pageEvent?.pageIndex, this.pageEvent?.pageSize);
   }
 
-  update() {
-    this.dialog
-    .open(UpdatePostComponent)
-    .afterClosed()
-    .subscribe(res => {
-      console.log(res)
+  update(post: Post) {
+    console.log(post)
+    this.dialog.open(UpdatePostComponent, {
+      data: {...post}
+    }).afterClosed().subscribe((res: Post) => {
+      this.data = this.posts.map((post: Post) => {
+        return post.id === res.id? post = res : post;
+      })
+      this.getPageData(this.pageEvent?.pageIndex, this.pageEvent?.pageSize)
     })
   }
 }

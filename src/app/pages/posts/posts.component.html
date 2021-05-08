@@ -13,7 +13,8 @@
     </button>
   </div>
   <div class="posts">
-    <app-post [posts]="posts" (deletePost)="remove($event)" [className]="'red__posts'"></app-post>
+    <app-post [posts]="posts" (deletePost)="remove($event)" (update)="update($event)" [className]="'red__posts'">
+    </app-post>
   </div>
 </section>
 <mat-paginator [length]="data?.length" [pageIndex]="0" pageSize="25" [pageSizeOptions]="pageSizeOptions"

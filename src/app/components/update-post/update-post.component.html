@@ -1,0 +1,20 @@
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input [(ngModel)]="data.title" matInput type="text">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Body</mat-label>
+        <input [(ngModel)]="data.body" matInput type="text">
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button color="primary" [mat-dialog-close]="data" mat-raised-button >Update</button>
+  <button (click)="onNoClick()" color="warn" mat-raised-button>Close</button>
+</mat-dialog-actions>

@@ -8,7 +8,7 @@
         {{post.body}}
       </p>
       <mat-action-row>
-        <button color="primary" mat-raised-button>update</button>
+        <button (click)="updatePost(post)" color="primary" mat-raised-button>update</button>
         <button
           color="warn"
           mat-raised-button
