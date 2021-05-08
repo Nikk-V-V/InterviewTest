@@ -27,6 +27,7 @@ import { PostComponent } from './components/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PhotoComponent } from './components/photo/photo.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -45,7 +46,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatGridListModule
   ],
   declarations: [
     AppComponent,
