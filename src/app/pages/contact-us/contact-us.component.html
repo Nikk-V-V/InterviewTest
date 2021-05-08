@@ -10,9 +10,9 @@
           type="text"
         >
       </mat-form-field>
-      <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)">
+      <div class="errors" *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)">
         <div *ngIf="fullname.errors.required">
-          Name is required.
+          Full name is required.
         </div>
       </div>
     </mat-card-content>
@@ -25,15 +25,15 @@
           matInput type="text"
         >
       </mat-form-field>
-      <div *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div class="errors" *ngIf="email.invalid && (email.dirty || email.touched)">
         <div *ngIf="email.errors.required">
-          Name is required.
+          Email is required.
         </div>
         <div *ngIf="email.errors.email">
-          Name must be at least 4 characters long.
+          Please enter valid email
         </div>
-        <div *ngIf="email.errors.pattern">
-          Name cannot be Bob.
+        <div *ngIf="email.errors.pattern && !email.errors.email">
+          Please enter valid email
         </div>
       </div>
     </mat-card-content>
@@ -47,15 +47,15 @@
           type="tel"
         >
       </mat-form-field>
-      <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+      <div class="errors" *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
         <div *ngIf="phoneNumber.errors.required">
-          Name is required.
+          Phone number is required.
         </div>
         <div *ngIf="phoneNumber.errors.minlength">
-          Name must be at least 4 characters long.
+          Number must be at least 13 characters long.
         </div>
         <div *ngIf="phoneNumber.errors.pattern">
-          Name cannot be Bob.
+          Pleas enter valid format
         </div>
       </div>
     </mat-card-content>
@@ -63,6 +63,7 @@
       <button
         color="primary"
         mat-raised-button
+        [disabled]="form.status !== 'VALID'"
       >
         Submit
       </button>

@@ -8,3 +8,15 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+.errors {
+  div {
+    text-align: center;
+    font-size: 0.7rem;
+    background: #671a1a;
+    padding: 0.5rem;
+    border-radius: 0px;
+    margin: 0.5rem 0;
+    max-width: 200px;
+  }
+}
