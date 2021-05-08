@@ -60,11 +60,10 @@ export class PostsComponent implements OnInit {
       this.data.unshift(post);
       this.getPageData(this.pageEvent?.pageIndex, this.pageEvent?.pageSize);
     }
-    
   }
 
   remove(event): void {
-    this.data = this.data.filter(item => item.id !== event);
+    this.data = this.postService.remove(this.data, event)
     this.getPageData(this.pageEvent?.pageIndex, this.pageEvent?.pageSize);
   }
 
@@ -73,7 +72,7 @@ export class PostsComponent implements OnInit {
     this.dialog.open(UpdatePostComponent, {
       data: {...post}
     }).afterClosed().subscribe((res: Post) => {
-      this.data = this.data.map((post: Post) =>  post.id === res.id ? post = res : post)
+      this.data = this.postService.update(res, this.data)
       this.getPageData(this.pageEvent?.pageIndex, this.pageEvent?.pageSize)
     })
   }

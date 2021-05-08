@@ -9,6 +9,7 @@ import { Post } from '../../shared/interfaces';
 export class PostComponent implements OnInit {
   @Input('posts') posts: Post[];
   @Input('className') className: string;
+  @Input('isAction') isAction: boolean;
   @Output() deletePost: EventEmitter<any> = new EventEmitter();
   @Output() update: EventEmitter<any> = new EventEmitter();
 

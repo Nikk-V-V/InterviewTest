@@ -7,7 +7,7 @@
       <p>
         {{post.body}}
       </p>
-      <mat-action-row>
+      <mat-action-row *ngIf="is">
         <button (click)="updatePost(post)" color="primary" mat-raised-button>update</button>
         <button
           color="warn"

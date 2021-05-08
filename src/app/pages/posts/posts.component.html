@@ -13,7 +13,13 @@
     </button>
   </div>
   <div class="posts">
-    <app-post [posts]="posts" (deletePost)="remove($event)" (update)="update($event)" [className]="'red__posts'">
+    <app-post 
+    [posts]="posts" 
+    [isAction]="true"
+    (deletePost)="remove($event)" 
+    (update)="update($event)" 
+    [className]="'red__posts'"
+    >
     </app-post>
   </div>
 </section>
