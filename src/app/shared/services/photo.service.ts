@@ -12,4 +12,8 @@ export class PhotoService {
       'https://jsonplaceholder.typicode.com/photos'
     );
   }
+
+  getTopTen(photos: Photo[]) {
+    return photos.slice(0, 9);
+  }
 }

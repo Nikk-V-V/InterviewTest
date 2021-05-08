@@ -4,7 +4,17 @@
       <mat-expansion-panel-header>
         {{post.title}}
       </mat-expansion-panel-header>
-      {{post.body}}
+      <p>
+        {{post.body}}
+      </p>
+      <mat-action-row>
+        <button color="primary" mat-raised-button>update</button>
+        <button
+          color="warn"
+          mat-raised-button
+          (click)="remove(post.id)"
+        >delete</button>
+      </mat-action-row>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

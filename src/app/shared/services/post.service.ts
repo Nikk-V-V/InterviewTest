@@ -11,11 +11,7 @@ export class PostService {
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
   }
 
-  add(post: Post) {
-
-  }
-
-  update(post: Post) {
-
+  getTopTen(posts: Post[]) {
+    return posts.slice(0, 9);
   }
 }

@@ -1,6 +1,21 @@
 <section class="posts d-flex justyfy-center">
-  <app-post [posts]="posts" [className]="'red__posts'"></app-post>
+  <div class="create">
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Title</mat-label>
+      <input #title matInput type="text">
+    </mat-form-field>
+    <mat-form-field color="accent" appearance="fill">
+      <mat-label>Text</mat-label>
+      <input #text matInput type="text">
+    </mat-form-field>
+    <button (click)="add(title, text)" color="primary" mat-icon-button>
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="posts">
+    <app-post [posts]="posts" (deletePost)="remove($event)" [className]="'red__posts'"></app-post>
+  </div>
 </section>
-<mat-paginator [length]="data?.length" [pageIndex]="0" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+<mat-paginator [length]="data?.length" [pageIndex]="0" pageSize="25" [pageSizeOptions]="pageSizeOptions"
   (page)="getPageData($event.pageIndex, $event.pageSize)">
 </mat-paginator>

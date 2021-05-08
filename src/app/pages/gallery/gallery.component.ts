@@ -61,7 +61,7 @@ export class GalleryComponent implements OnInit {
     });
   }
 
-  getPageData(pageIndex: number, pageSize: number): void {
+  getPageData(pageIndex: number = 0, pageSize: number = 27): void {
     const startIndex = pageIndex * pageSize;
     this.photos = [...this.data].splice(startIndex, pageSize);
   }

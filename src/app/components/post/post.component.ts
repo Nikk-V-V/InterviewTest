@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from '../../shared/interfaces';
 
 @Component({
@@ -9,7 +9,12 @@ import { Post } from '../../shared/interfaces';
 export class PostComponent implements OnInit {
   @Input('posts') posts: Post[];
   @Input('className') className: string;
+  @Output() deletePost: EventEmitter<any> = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
+
+  remove(id: number): any {
+    this.deletePost.emit(id);
+  }
 }

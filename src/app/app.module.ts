@@ -28,6 +28,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { PhotoComponent } from './components/photo/photo.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UpdatePostComponent } from './components/update-post/update-post.component';
 
 @NgModule({
   imports: [
@@ -47,7 +49,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ReactiveFormsModule,
     MatInputModule,
     MatPaginatorModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   declarations: [
     AppComponent,
@@ -59,7 +62,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ContactUsComponent,
     PhotoComponent,
     PostComponent,
-    HomeComponent
+    HomeComponent,
+    UpdatePostComponent,
+  
   ],
   bootstrap: [AppComponent],
   providers: [PostService, PhotoService]
