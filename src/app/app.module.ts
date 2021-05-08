@@ -26,6 +26,7 @@ import { PhotoService } from './shared/services/photo.service';
 import { PostComponent } from './components/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PhotoComponent } from './components/photo/photo.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { PhotoComponent } from './components/photo/photo.component';
     MatExpansionModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ],
   declarations: [
     AppComponent,

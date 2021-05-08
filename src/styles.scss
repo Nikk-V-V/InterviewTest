@@ -66,3 +66,11 @@ mat-toolbar.footer {
     padding: 0 !important;
   }
 }
+
+.red__posts {
+  background: radial-gradient(rgb(255 0 0), rgb(0 0 0 / 40%));
+}
+
+.green__posts {
+  background: radial-gradient(#038800, #54545459);
+}

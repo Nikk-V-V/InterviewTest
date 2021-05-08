@@ -10,6 +10,11 @@
           type="text"
         >
       </mat-form-field>
+      <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)">
+        <div *ngIf="fullname.errors.required">
+          Name is required.
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-content>
       <mat-form-field color="accent" appearance="outline">
@@ -20,6 +25,17 @@
           matInput type="text"
         >
       </mat-form-field>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="email.errors.email">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="email.errors.pattern">
+          Name cannot be Bob.
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-content>
       <mat-form-field color="accent" appearance="outline">
@@ -31,7 +47,7 @@
           type="tel"
         >
       </mat-form-field>
-      <div *ngIf="phoneNumberme.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+      <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
         <div *ngIf="phoneNumber.errors.required">
           Name is required.
         </div>

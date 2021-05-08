@@ -1,6 +1,6 @@
 <div class="posts__container">
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel [ngClass]="className" *ngFor="let post of posts" hideToggle>
       <mat-expansion-panel-header>
         {{post.title}}
       </mat-expansion-panel-header>

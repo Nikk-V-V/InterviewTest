@@ -1,1 +1,6 @@
-<section class="posts"></section>
+<section class="posts d-flex justyfy-center">
+  <app-post [posts]="posts" [className]="'red__posts'"></app-post>
+</section>
+<mat-paginator [length]="data?.length" [pageIndex]="0" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+  (page)="getPageData($event.pageIndex, $event.pageSize)">
+</mat-paginator>

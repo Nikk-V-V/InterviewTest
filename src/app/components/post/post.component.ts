@@ -8,10 +8,8 @@ import { Post } from '../../shared/interfaces';
 })
 export class PostComponent implements OnInit {
   @Input('posts') posts: Post[];
-
+  @Input('className') className: string;
   constructor() {}
 
   ngOnInit() {}
-
-  
 }
