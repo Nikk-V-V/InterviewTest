@@ -4,6 +4,9 @@
 @import '~@angular/material/theming';
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -67,10 +70,22 @@ mat-toolbar.footer {
   }
 }
 
+.mat-select-panel {
+  background: red;
+}
+
 .red__posts {
   background: radial-gradient(rgb(255 0 0), rgb(0 0 0 / 40%));
+  * {
+    font-family: 'Roboto Condensed', monospace;
+    font-size: 1.2rem !important;
+  }
 }
 
 .green__posts {
   background: radial-gradient(#038800, #54545459);
+  * {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+  }
 }

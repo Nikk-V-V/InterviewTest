@@ -1,3 +1,19 @@
 .gallery {
   background: #5f5f15;
 }
+
+mat-card {
+  padding: 0;
+  background: #000000b3;
+  width: 350px;
+  height: 250px;
+  text-align: center;
+  img {
+    height: 190px;
+    object-fit: cover;
+  }
+  mat-card-title {
+    font-size: 18px;
+    padding: 0.5rem;
+  }
+}

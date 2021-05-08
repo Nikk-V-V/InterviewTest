@@ -8,17 +8,18 @@ import { PhotoService } from '../../shared/services/photo.service';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
+  photos: Photo[];
 
-  photos: Photo[]
-
-  constructor(private photoService: PhotoService) { }
+  constructor(private photoService: PhotoService) {}
 
   ngOnInit() {
+    this.get();
   }
 
-  getTopPhotos() {
+  get() {
     this.photoService.getAll().subscribe((photos: Photo[]) => {
-      this.photos = photos;
+      console.log(photos);
+      this.photos = photos.slice(0, 50);
     });
   }
 }
