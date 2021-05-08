@@ -18,7 +18,7 @@ export class ContactUsComponent implements OnInit {
         Validators.email,
         Validators.pattern(/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i)
       ]),
-      phoneNumber: new FormControl('+380', [
+      phoneNumber: new FormControl('+', [
         Validators.required,
         Validators.minLength(13),
         Validators.pattern(
