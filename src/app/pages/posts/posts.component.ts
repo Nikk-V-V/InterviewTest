@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { Post } from '../../shared/interfaces';
 import { PostService } from '../../shared/services/post.service';
 
@@ -9,7 +9,6 @@ import { PostService } from '../../shared/services/post.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   posts: Post[];
   data: Post[];

@@ -1,3 +1,13 @@
 mat-toolbar {
   background: #8a8500;
 }
+
+@media only screen and (max-width: 520px) {
+  footer {
+    mat-toolbar {
+      mat-selection-list {
+        display: none !important;
+      }
+    }
+  }
+}

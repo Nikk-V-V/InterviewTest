@@ -1,16 +1,18 @@
-<mat-toolbar class="header">
-  <mat-toolbar-row class="container justyfy-between align-center">
-    <button
-    mat-icon-button
-    (click)="drawer.toggle()"
-    >
-        <mat-icon>menu</mat-icon>
-    </button>
-    <mat-selection-list [multiple]="false">
-      <mat-list-option routerLink="home">Home</mat-list-option>
-      <mat-list-option routerLink="posts">Posts</mat-list-option>
-      <mat-list-option routerLink="gallery">Gallery</mat-list-option>
-      <mat-list-option routerLink="contact-us">Contact us</mat-list-option>
-    </mat-selection-list>
-  </mat-toolbar-row>
-</mat-toolbar>
+<header>
+  <mat-toolbar class="header">
+    <mat-toolbar-row class="container justyfy-between align-center">
+      <button
+      mat-icon-button
+      (click)="drawer.toggle()"
+      >
+          <mat-icon>menu</mat-icon>
+      </button>
+      <mat-selection-list [multiple]="false">
+        <mat-list-option routerLink="home">Home</mat-list-option>
+        <mat-list-option routerLink="posts">Posts</mat-list-option>
+        <mat-list-option routerLink="gallery">Gallery</mat-list-option>
+        <mat-list-option routerLink="contact-us">Contact us</mat-list-option>
+      </mat-selection-list>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

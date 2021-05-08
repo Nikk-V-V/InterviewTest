@@ -1,5 +1,5 @@
 <section class="gallery">
-  <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
     <mat-grid-tile *ngFor="let photo of photos">
       <mat-card>
         <img mat-card-img [src]="photo.thumbnailUrl" alt="image">
@@ -8,3 +8,6 @@
     </mat-grid-tile>
   </mat-grid-list>
 </section>
+<mat-paginator [length]="data?.length" [pageIndex]="0" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+  (page)="getPageData($event.pageIndex, $event.pageSize)">
+</mat-paginator>

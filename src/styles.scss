@@ -62,6 +62,11 @@ section {
   padding: 2rem;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 mat-toolbar.header,
 mat-toolbar.footer {
   mat-selection-list {
@@ -75,7 +80,7 @@ mat-toolbar.footer {
 }
 
 .red__posts {
-  background: radial-gradient(rgb(255 0 0), rgb(0 0 0 / 40%));
+  background: radial-gradient(#9a0000, rgba(0, 0, 0, 0.4));
   * {
     font-family: 'Roboto Condensed', monospace;
     font-size: 1.2rem !important;
@@ -89,3 +94,9 @@ mat-toolbar.footer {
     font-size: 1rem;
   }
 }
+
+mat-sidenav-content {
+  background: #1f1f1f;
+}
+
+

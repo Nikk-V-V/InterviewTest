@@ -14,10 +14,10 @@ export class ContactUsComponent implements OnInit {
     this.form = new FormGroup({
       fullname: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [
-        Validators.required, 
+        Validators.required,
         Validators.email,
         Validators.pattern(/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i)
-        ]),
+      ]),
       phoneNumber: new FormControl('+380', [
         Validators.required,
         Validators.minLength(13),

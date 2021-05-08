@@ -1,12 +1,12 @@
 .gallery {
-  background: #5f5f15;
+  background: #1d1c00;
 }
 
 mat-card {
   padding: 0;
   background: #000000b3;
   width: 350px;
-  height: 250px;
+  height: 270px;
   text-align: center;
   img {
     height: 190px;
@@ -16,4 +16,8 @@ mat-card {
     font-size: 18px;
     padding: 0.5rem;
   }
+}
+
+mat-paginator {
+  background: #1d1c00;
 }
